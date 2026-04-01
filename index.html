@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crop Nutrition Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1>🌾 Crop Nutrition Explorer</h1>
+    <button id="themeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search a crop e.g. rice, wheat..." />
+
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="cereal">Cereal & Grains</option>
+      <option value="vegetable">Vegetables</option>
+      <option value="fruit">Fruits</option>
+      <option value="legume">Legumes</option>
+    </select>
+
+    <select id="sortSelect">
+      <option value="default">Sort By</option>
+      <option value="protein">Highest Protein</option>
+      <option value="calories">Highest Calories</option>
+      <option value="name">Name A-Z</option>
+    </select>
+  </div>
+
+  <p id="statusMsg">⏳ Fetching crop nutrition data...</p>
+
+  <div id="cardsContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

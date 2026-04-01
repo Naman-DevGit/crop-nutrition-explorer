@@ -1,0 +1,204 @@
+
+
+
+/* Basic page style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f9f4;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark mode - applied when JavaScript adds class "dark" to body */
+body.dark {
+  background-color: #1a1a1a;
+  color: #eeeeee;
+}
+
+/* Header */
+.header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Dark mode button */
+.header button {
+  background: white;
+  color: #2e7d32;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background: #c8e6c9;
+}
+
+/* Controls - search, filter, sort */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 24px;
+  background-color: #e8f5e9;
+}
+
+body.dark .controls {
+  background-color: #2a2a2a;
+}
+
+/* Search input and dropdowns */
+.controls input,
+.controls select {
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  color: #222222;
+}
+
+body.dark .controls input,
+body.dark .controls select {
+  background: #333333;
+  color: #eeeeee;
+  border-color: #555555;
+}
+
+/* Search box takes more width */
+.controls input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Status message */
+#statusMsg {
+  text-align: center;
+  padding: 20px;
+  color: #666666;
+}
+
+body.dark #statusMsg {
+  color: #aaaaaa;
+}
+
+/* Cards grid - responsive */
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+/* Single card */
+.card {
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+body.dark .card {
+  background: #2a2a2a;
+  border-color: #444444;
+}
+
+/* Crop name */
+.card h3 {
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+  color: #2e7d32;
+}
+
+body.dark .card h3 {
+  color: #81c784;
+}
+
+/* Category label */
+.card .category {
+  font-size: 0.75rem;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+/* Each nutrient row */
+.nutrient {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+body.dark .nutrient {
+  border-bottom-color: #3a3a3a;
+}
+
+/* Nutrient value on right */
+.nutrient span:last-child {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+body.dark .nutrient span:last-child {
+  color: #81c784;
+}
+
+/* Favourite button */
+.fav-btn {
+  margin-top: 12px;
+  width: 100%;
+  background: none;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #444444;
+}
+
+.fav-btn:hover {
+  background: #fdecea;
+  border-color: #e57373;
+  color: #c62828;
+}
+
+body.dark .fav-btn {
+  color: #eeeeee;
+  border-color: #555555;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  #cardsContainer {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
