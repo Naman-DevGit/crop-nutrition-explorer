@@ -16,4 +16,8 @@ Features
 Technologies
 HTML, CSS, JavaScript
 
+## 🌐 Live Demo
+https://naman-devgit.github.io/crop-nutrition-explorer
+
+
 
